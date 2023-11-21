@@ -1,5 +1,5 @@
 import cors from 'cors';
-import express, { Express } from 'express';
+import express, {  Request, Response } from 'express';
 import fileUpload from 'express-fileupload';
 import helmet from 'helmet';
 import morgan from 'morgan';
@@ -25,6 +25,9 @@ app.use('/track', trackRoutes);
 app.use('/genre', genreRoutes);
 app.use('/artist', artistRoutes);
 app.use('/album', albumRoutes);
+app.get("/", (req: Request, res: Response) => {
+    res.status(200).json({message: "Welcome to the API world"})
+  })
 app.use(errorHandler)
 
 export default app;
