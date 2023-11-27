@@ -61,7 +61,7 @@ const CardForTrack = ({ id, trackName, trackImage }: TrackProps) => {
 
   return (
     <CardForTrackStyles key={id}>
-      <Link className="cardForTrack" onClick={() => handleCurrentTrackById(id)} to={`${PLAYER}`}>
+      <Link className="cardForTrack" onClick={() => handleCurrentTrackById(id)} to={`${PLAYER}`} title={`Track: ${trackName}`}>
         <div className="cardForTrack__header">
           <img alt={trackName} className="cardForTrack__header_img" src={trackImage} />
         </div>
@@ -205,8 +205,10 @@ const CardForTrackStyles = styled.div`
         background-color: #0d1117;
         width: 300px;
         height: 150px;
-        z-index: 20;
+        z-index: 200;
         opacity: 0;
+        overflow: hidden;
+        transition: 2.8s ease-out;
 
         &_ul {
           position: relative;

@@ -43,6 +43,7 @@ export const TracksContainer = ({ query }: ProprQuery) => {
           navigation
           slidesPerView={3}
           spaceBetween={30}
+          scrollbar={true}
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}

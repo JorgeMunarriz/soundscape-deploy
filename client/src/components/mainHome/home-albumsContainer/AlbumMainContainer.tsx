@@ -39,8 +39,8 @@ export const AlbumContainer = ({ query }: ProprQuery) => {
     <AlbumsContainerStyles>
       <h2 className="albumsTitle">Albums</h2>
       {albums && (
-        <Swiper 
-        navigation
+        <Swiper
+          navigation
           slidesPerView={3}
           spaceBetween={30}
           effect={"coverflow"}
@@ -62,7 +62,7 @@ export const AlbumContainer = ({ query }: ProprQuery) => {
               .map(({ id, albumName, albumImage, trackId }) => (
                 <SwiperSlide key={id}>
                   <Suspense key={id} fallback={<HomeSkeleton />}>
-                    <LazyCardAlbumHome id={id} albumImage={albumImage} albumName={albumName} trackId={trackId}  />
+                    <LazyCardAlbumHome id={id} albumImage={albumImage} albumName={albumName} trackId={trackId} />
                   </Suspense>
                 </SwiperSlide>
               ))}
@@ -95,7 +95,7 @@ const AlbumsContainerStyles = styled.div`
       align-items: center;
       justify-content: flex-start;
       padding: 0 0.5rem;
-      
+
       gap: 1rem;
       .swiper-slide {
         margin: 0;
@@ -132,10 +132,10 @@ const AlbumsContainerStyles = styled.div`
     .swiper-pagination {
       bottom: 0px;
     }
-    .swiper-slide-shadow-right{
+    .swiper-slide-shadow-right {
       background-image: none;
     }
-    .swiper-slide-shadow-left{
+    .swiper-slide-shadow-left {
       background-image: none;
     }
   }
@@ -159,7 +159,7 @@ const AlbumsContainerStyles = styled.div`
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        
+
         gap: 1rem;
         .swiper-slide {
           margin: 0;
@@ -217,7 +217,7 @@ const AlbumsContainerStyles = styled.div`
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        
+
         gap: 1rem;
         .swiper-slide {
           margin: 0;
@@ -275,7 +275,7 @@ const AlbumsContainerStyles = styled.div`
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        
+
         gap: 1rem;
         .swiper-slide {
           margin: 0;
@@ -333,7 +333,7 @@ const AlbumsContainerStyles = styled.div`
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        
+
         gap: 1rem;
         .swiper-slide {
           margin: 0;
@@ -390,7 +390,7 @@ const AlbumsContainerStyles = styled.div`
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        
+
         gap: 1rem;
         .swiper-slide {
           margin: 0;

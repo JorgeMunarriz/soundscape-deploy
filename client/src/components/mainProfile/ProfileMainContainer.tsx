@@ -7,6 +7,8 @@ import Modal from "../modal/Modal";
 import { UserForms, ArtistCreateForm } from "..";
 import styled from "styled-components";
 import { useUserContext } from "../../hooks";
+import { Link } from "react-router-dom";
+import { HOME } from "../../config/routes/paths";
 
 export const ProfileMainContainer = () => {
   const { user } = useAuth0();
@@ -27,7 +29,7 @@ export const ProfileMainContainer = () => {
       <ProfileMainContainerStyles>
         <ProfileIconsContainer>
           <Boop rotation={20} timing={200}>
-            <IoChevronBackOutline />
+            <Link to={HOME}><IoChevronBackOutline /> </Link>
           </Boop>
           <Boop rotation={20} timing={200}>
             {" "}

@@ -27,7 +27,7 @@ const CardForPlaylistPlayerHome = ({ id, playlistImage, playlistName }: Playlist
 
   return (
     <CardForPlaylistPlayerHomeStyles>
-      <Link to={`${PLAYLISTS}/${id}`} className={"cardForPlaylistPlayer"}>
+      <Link to={`${PLAYLISTS}/${id}`} className={"cardForPlaylistPlayer"} title={`Playlist: ${playlistName}`}>
         <div className="cardForPlaylistPlayer__header">
           <img className="cardForPlaylistPlayer__header_img" src={playlistImage} alt={`Track image: ${playlistName}`} />
         </div>
